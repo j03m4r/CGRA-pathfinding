@@ -1,5 +1,7 @@
 #include <vector>
 #include <map>
+#include <unordered_set>
+#include <set>
 #include <utility>
 #include <cstdlib>
 #include <iostream>
@@ -133,6 +135,53 @@ int addPosData(std::string f, Graph& g) {
 
     file.close();
     return 0;
+}
+
+
+// Implementation based off of geeksforgeeks formula of A* found at: https://www.geeksforgeeks.org/dsa/a-search-algorithm/
+std::vector<Node*> astar(Graph& g, int s, int f) {
+    std::vector<Node*> path;
+    path.push_back(s); // Start node should be at "start" of path
+    
+    // 1.  Initialize the open list
+    std::set<Node*> open;
+
+    // 2.  Initialize the closed list
+    std::unordered_set<Node*> closed;
+
+    // put the starting node on the open list (you can leave its f at zero)
+    open.insert(g.nodes[s]);
+
+    Node* q;
+    // 3.  while the open list is not empty
+    while (open.size() != 0) {
+    // a) find the node with the least f on the open list, call it "q"
+        q = open.front();
+        for (auto& nd: open) {
+            if (nd.f < q.f) {
+                q = nd;
+            }
+        }
+    // b) pop q off the open list  
+        queue.erase(q);
+    // c) generate q's 8 successors and set their parents to q
+   
+    // d) for each successor
+        // i) if successor is the goal, stop search
+        
+        // ii) else, compute both g and h for successor
+        //   successor.g = q.g + distance between successor and q
+        //   successor.h = distance from goal to successor 
+        //   successor.f = successor.g + successor.h
+        // iii) if a node with the same position as 
+        //     successor is in the OPEN list which has a 
+        //    lower f than successor, skip this successor
+        // iV) if a node with the same position as 
+        //     successor  is in the CLOSED list which has
+        //     a lower f than successor, skip this successor
+        //     otherwise, add  the node to the open list  
+    // e) push q on the closed list
+    }
 }
 
 int main() {

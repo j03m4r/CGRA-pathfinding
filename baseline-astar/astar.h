@@ -42,5 +42,9 @@ std::vector<std::string> split(const std::string& str, const std::string& delimi
 // Fill graph from file
 int fillGraph(std::string f, Graph& g);
 
+// adds coordinate data to graph
 int addPosData(std::string f, Graph& g);
+
+//calculates shortest path as described in a* algorithm
+std::vector<Node*> astar(Graph& g, int s, int f);
 #endif // ASTAR_H
