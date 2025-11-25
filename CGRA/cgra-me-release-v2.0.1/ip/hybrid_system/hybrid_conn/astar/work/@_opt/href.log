@@ -1,0 +1,45 @@
+BEGIN 1:riscv_controller:fast:work
+    ecall_insn_i :  1:riscv_core:fast:work
+    mret_insn_i :  1:riscv_core:fast:work
+    dret_insn_i :  1:riscv_core:fast:work
+    ebrk_insn_i :  1:riscv_core:fast:work
+    pipe_flush_i :  1:riscv_core:fast:work
+    uret_insn_i :  1:riscv_core:fast:work
+END 
+BEGIN 1:instruc_ram:fast:work
+    mem :  1:tb_top:fast:work
+END 
+BEGIN 1:riscv_ex_stage:fast:work
+    branch_in_ex_i :  1:riscv_core:fast:work
+END 
+BEGIN 1:riscv_core:fast:work
+    core_id_i :  1:riscv_controller:fast:work
+END 
+BEGIN 1:riscv_id_stage:fast:work
+    imm_s3_type :  1:riscv_core:fast:work
+    regfile_fp_c :  1:riscv_core:fast:work
+    imm_z_type :  1:riscv_core:fast:work
+    alu_operand_c :  1:riscv_core:fast:work
+    imm_shuffle_type :  1:riscv_core:fast:work
+    is_compressed_i :  1:riscv_core:fast:work
+    imm_u_type :  1:riscv_core:fast:work
+    imm_s2_type :  1:riscv_core:fast:work
+    regfile_fp_b :  1:riscv_core:fast:work
+    imm_iz_type :  1:riscv_core:fast:work
+    operand_b_fw_id :  1:riscv_core:fast:work
+    imm_vu_type :  1:riscv_core:fast:work
+    instr :  1:riscv_core:fast:work
+    imm_sb_type :  1:riscv_core:fast:work
+    regfile_fp_a :  1:riscv_core:fast:work
+    is_decoding_o :  1:riscv_core:fast:work
+    imm_i_type :  1:riscv_core:fast:work
+    operand_a_fw_id :  1:riscv_core:fast:work
+    imm_vs_type :  1:riscv_core:fast:work
+    pc_id_i :  1:riscv_controller:fast:work 1:riscv_core:fast:work
+    regfile_fp_d :  1:riscv_core:fast:work
+    imm_s_type :  1:riscv_core:fast:work
+    alu_operand_b :  1:riscv_core:fast:work
+    instr_rdata_i :  1:riscv_core:fast:work
+    id_valid_o :  1:riscv_core:fast:work
+    imm_uj_type :  1:riscv_core:fast:work
+END 

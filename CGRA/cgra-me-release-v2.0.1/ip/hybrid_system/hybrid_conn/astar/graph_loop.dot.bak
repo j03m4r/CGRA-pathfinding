@@ -1,0 +1,43 @@
+digraph G {
+  // Memory loads
+  i4_load0 [opcode=load,  label="col_idx[e]"];
+  i4_load1 [opcode=load,  label="weights[e]"];
+  i4_load2 [opcode=load,  label="positions_x[neighbor]"];
+  i4_load3 [opcode=load,  label="positions_y[neighbor]"];
+
+  // Inputs
+  g_current [opcode=input, label="g_current"];
+  goal_x    [opcode=input, label="goal_x"];
+  goal_y    [opcode=input, label="goal_y"];
+
+  // Arithmetic operations
+  tentative_g [opcode=add, label="g + weight"];
+  dx          [opcode=sub, label="nx - gx"];
+  dy          [opcode=sub, label="ny - gy"];
+  dx_sq       [opcode=mul, label="dx * dx"];
+  dy_sq       [opcode=mul, label="dy * dy"];
+  sum_sq      [opcode=add, label="dx² + dy²"];
+
+  // Store results
+  i4_store0 [opcode=store, label="store neighbor"];
+  i4_store1 [opcode=store, label="store g_value"];
+
+  // Data dependencies
+  g_current -> tentative_g;
+  i4_load1 -> tentative_g;
+
+  i4_load2 -> dx;
+  goal_x    -> dx;
+
+  i4_load3 -> dy;
+  goal_y    -> dy;
+
+  dx -> dx_sq;
+  dy -> dy_sq;
+  dx_sq -> sum_sq;
+  dy_sq -> sum_sq;
+
+  i4_load0 -> i4_store0;
+  tentative_g -> i4_store1;
+}
+

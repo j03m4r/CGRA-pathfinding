@@ -1,0 +1,141 @@
+# vsim work.tb_top "+firmware=firmware/firmware.hex" 
+# Start time: 11:35:05 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.tb_top
+# Loading work.hybrid_wrapper
+# Loading work.fpnew_pkg
+# Loading work.riscv_defines
+# Loading work.apu_core_package
+# Loading work.riscv_core_sv_unit
+# Loading work.riscv_core
+# Loading work.cv32e40p_sim_clock_gating
+# Loading work.riscv_if_stage_sv_unit
+# Loading work.riscv_if_stage
+# Loading work.riscv_hwloop_controller
+# Loading work.riscv_compressed_decoder_sv_unit
+# Loading work.riscv_compressed_decoder
+# Loading work.riscv_id_stage_sv_unit
+# Loading work.riscv_id_stage
+# Loading work.register_file_test_wrap
+# Loading work.riscv_register_file
+# Loading work.riscv_decoder_sv_unit
+# Loading work.riscv_decoder
+# Loading work.riscv_controller_sv_unit
+# Loading work.riscv_controller
+# Loading work.riscv_int_controller_sv_unit
+# Loading work.riscv_int_controller
+# Loading work.riscv_hwloop_regs
+# Loading work.riscv_ex_stage_sv_unit
+# Loading work.riscv_ex_stage
+# Loading work.riscv_alu_sv_unit
+# Loading work.riscv_alu
+# Loading work.alu_popcnt
+# Loading work.alu_ff
+# Loading work.riscv_mult_sv_unit
+# Loading work.riscv_mult
+# Loading work.riscv_load_store_unit
+# Loading work.riscv_cs_registers_sv_unit
+# Loading work.riscv_cs_registers
+# ** Error: (vsim-3033) Instantiation of 'riscv_tracer' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top/riscv_wrapper_i/riscv_core_i File: ../riscv/riscv_core.sv Line: 1157
+#         Searched libraries:
+#             /home/joemar/Documents/courses/csci5204-fa25/CGRA-pathfinding/CGRA/cgra-me-release-v2.0.1/ip/hybrid_system/hybrid_conn/work
+# Loading work.cgra_U0
+# Loading work.io_32b_U1
+# Loading work.cgrame_tristate_32b
+# Loading work.cgrame_configcell_context_II_1_1_size1
+# Loading work.cgrame_register_32b
+# Loading work.memoryPort_4connect_32b_U2
+# Loading work.cgrame_configcell_context_II_1_1_size2
+# Loading work.cgrame_memUnit_32b
+# Loading work.cgrame_mux_4to1_32b
+# Loading work.hycube_in79_out79_U3
+# Loading work.func_32b_add_sub_multiply_and_or_xor_shl_ashr_lshr_cmp_U12
+# Loading work.cgrame_caseStatement_10in_0latency_32b
+# Loading work.cgrame_op_add_32b
+# Loading work.cgrame_op_and_32b
+# Loading work.cgrame_op_ashr_32b
+# Loading work.cgrame_op_cmp_32b
+# Loading work.cgrame_op_lshr_32b
+# Loading work.cgrame_op_multiply_32b
+# Loading work.cgrame_op_or_32b
+# Loading work.cgrame_op_shl_32b
+# Loading work.cgrame_op_sub_32b
+# Loading work.cgrame_op_xor_32b
+# Loading work.cgrame_configcell_context_II_1_1_size4
+# Loading work.const_32b_U14
+# Loading work.cgrame_configcell_context_II_1_1_size32
+# Loading work.crossbar_8in_7out_32data_size_U19
+# Loading work.cgrame_configcell_context_II_1_1_size3
+# Loading work.cgrame_mux_8to1_32b
+# Loading work.cgrame_mux_2to1_32b
+# Loading work.hycube_in111_out111_U4
+# Loading work.crossbar_9in_8out_32data_size_U15
+# Loading work.cgrame_mux_9to1_32b
+# Loading work.hycube_in47_out47_U5
+# Loading work.hycube_in207_out207_U6
+# Loading work.hycube_in255_out255_U7
+# Loading work.crossbar_11in_10out_32data_size_U20
+# Loading work.cgrame_mux_11to1_32b
+# Loading work.hycube_in63_out63_U8
+# Loading work.hycube_in143_out143_U9
+# Loading work.hycube_in159_out159_U10
+# Loading work.hycube_in31_out31_U11
+# Loading work.CGRA_configurator
+# Loading work.mm_ram
+# Loading work.dp_ram
+# Loading work.instruc_ram
+# Error loading design
+# End time: 11:35:06 on Nov 18,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -work work ../riscv/include/riscv_defines.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:36:25 on Nov 18,2025
+# vlog -reportprogress 300 -work work ../riscv/include/riscv_defines.sv 
+# -- Compiling package riscv_defines
+# -- Importing package fpnew_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:36:25 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work riscv_tracer_defines.sv  
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:36:25 on Nov 18,2025
+# vlog -reportprogress 300 -work work riscv_tracer_defines.sv 
+# -- Compiling package riscv_tracer_defines
+# -- Importing package riscv_defines
+# -- Importing package fpnew_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 11:36:25 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work riscv_tracer.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:36:25 on Nov 18,2025
+# vlog -reportprogress 300 -work work riscv_tracer.sv 
+# -- Compiling package riscv_tracer_sv_unit
+# -- Importing package riscv_defines
+# -- Importing package fpnew_pkg
+# -- Importing package riscv_tracer_defines
+# -- Compiling module riscv_tracer
+# 
+# Top level modules:
+# 	riscv_tracer
+# End time: 11:36:25 on Nov 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Now load the design
+vsim work.tb_top "+firmware=firmware/firmware.hex"
+# vsim work.tb_top "+firmware=firmware/firmware.hex" 
+# Start time: 11:36:25 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.tb_top
+# Loading work.hybrid_wrapper
+# ** Error: (vsim-13) Recompile work.riscv_core_sv_unit because work.riscv_defines has changed.
+# ** Error (suppressible): (vsim-12) Recompile work.riscv_core after work.riscv_core_sv_unit is recompiled.
+# ** Error: (vsim-13) Recompile work.riscv_core because work.riscv_defines has changed.
+# Error loading design
+# End time: 11:36:26 on Nov 18,2025, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0

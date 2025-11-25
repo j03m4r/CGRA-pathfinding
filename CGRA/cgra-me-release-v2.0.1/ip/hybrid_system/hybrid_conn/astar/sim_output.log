@@ -1,0 +1,57 @@
+Reading pref.tcl
+
+# 2025.2
+
+# ** Note: (vsim-220) '/opt/questaFPGA/questa_fse/linux_x86_64/../modelsim.ini' is used as the ini file.
+# vsim -c -do "run 100ms; quit" work.tb_top "+firmware=firmware/firmware.hex" "+verbose" 
+# Start time: 18:32:02 on Nov 24,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.fpnew_pkg(fast)
+# Loading work.riscv_defines(fast)
+# Loading work.riscv_tracer_defines(fast)
+# Loading work.riscv_tracer_sv_unit(fast)
+# Loading work.riscv_pmp_sv_unit(fast)
+# Loading work.riscv_cs_registers_sv_unit(fast)
+# Loading work.riscv_mult_sv_unit(fast)
+# Loading work.riscv_alu_sv_unit(fast)
+# Loading work.apu_core_package(fast)
+# Loading work.riscv_ex_stage_sv_unit(fast)
+# Loading work.riscv_int_controller_sv_unit(fast)
+# Loading work.riscv_controller_sv_unit(fast)
+# Loading work.riscv_decoder_sv_unit(fast)
+# Loading work.riscv_id_stage_sv_unit(fast)
+# Loading work.riscv_compressed_decoder_sv_unit(fast)
+# Loading work.riscv_if_stage_sv_unit(fast)
+# Loading work.riscv_core_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.hycube_in255_out255_U7(fast)
+# ** Warning: (vsim-3356) Index into 'ram_data_rdata_tmp' is out of bounds.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_top/riscv_wrapper_i/ram_i File: ./control.sv Line: 886
+# ** Warning: (vsim-3356) Index into 'ram_data_rdata_tmp' is out of bounds.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_top/riscv_wrapper_i/ram_i File: ./control.sv Line: 867
+# ** Warning: (vsim-3356) Index into 'ram_data_rdata_tmp' is out of bounds.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_top/riscv_wrapper_i/ram_i File: ./control.sv Line: 848
+# ** Warning: (vsim-3356) Index into 'ram_data_rdata_tmp' is out of bounds.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_top/riscv_wrapper_i/ram_i File: ./control.sv Line: 829
+# run 100ms
+# [TESTBENCH]                    0: loading firmware firmware/firmware.hex ...
+# [CORE] Core settings: PULP_SECURE =           1, N_PMP_ENTRIES =          16, N_PMP_CFG           4
+# [TESTBENCH]       8ns: reset released
+#  quit
+# End time: 18:39:32 on Nov 24,2025, Elapsed time: 0:07:30
+# Errors: 0, Warnings: 4
